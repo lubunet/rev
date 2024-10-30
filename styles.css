@@ -1,0 +1,71 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.header, .section, .footer {
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.hero {
+  background-color: #5f9ea0;
+  color: white;
+  padding: 50px;
+  text-align: center;
+}
+
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #575757;
+}
+
+.section {
+  background-color: white;
+  margin: 20px;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.team {
+  display: flex;
+  justify-content: space-around;
+}
+
+.team-member {
+  background-color: #e0f7fa;
+  padding: 20px;
+  border-radius: 8px;
+  width: 30%;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
