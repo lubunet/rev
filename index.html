@@ -3,27 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUBU NET - Apresentação</title>
+    <title>LUBU NET - Vitrine</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .section { display: none; }
+        .active { display: block; }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            // Esconde todas as seções
+            document.querySelectorAll('.section').forEach((section) => {
+                section.classList.remove('active');
+            });
+            // Mostra a seção escolhida
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
 </head>
-<body>
+<body onload="showSection('apresentacao')">
 
 <header>
     <h1>LUBU NET</h1>
-    <p>Seus produtos digitais em um só lugar</p>
 </header>
 
 <nav>
-    <a href="index.html">Apresentação</a>
-    <a href="conclusao.html">Conclusão</a>
-    <a href="teste.html">Teste do Produto</a>
+    <a href="#" onclick="showSection('apresentacao')">Apresentação</a>
+    <a href="#" onclick="showSection('conclusao')">Conclusão</a>
+    <a href="#" onclick="showSection('teste')">Teste do Produto</a>
 </nav>
 
 <div class="container">
-    <h2>Bem-vindo à LUBU NET!</h2>
-    <p>A LUBU NET oferece uma variedade de produtos digitais de alta qualidade, prontos para atender às suas necessidades. Navegue pelo nosso site e conheça nossas ofertas.</p>
-    <p>Explore nossos produtos e descubra como eles podem facilitar seu dia a dia.</p>
-    <a href="teste.html" class="button">Faça um Teste</a>
+
+    <!-- Página de Apresentação -->
+    <section id="apresentacao" class="section">
+        <h2>Bem-vindo à LUBU NET!</h2>
+        <p>A LUBU NET oferece uma variedade de produtos digitais de alta qualidade, prontos para atender às suas necessidades. Navegue pelo nosso site e conheça nossas ofertas.</p>
+        <p>Explore nossos produtos e descubra como eles podem facilitar seu dia a dia.</p>
+        <a href="#" class="button" onclick="showSection('teste')">Faça um Teste</a>
+    </section>
+
+    <!-- Página de Conclusão -->
+    <section id="conclusao" class="section">
+        <h2>Por que escolher a LUBU NET?</h2>
+        <p>Na LUBU NET, valorizamos cada cliente e garantimos produtos digitais que atendam às suas expectativas.</p>
+        <p>Veja o que nossos clientes estão dizendo:</p>
+        <blockquote>"Serviço excelente, produtos digitais de qualidade!"</blockquote>
+        <blockquote>"Facilidade e rapidez. Recomendo a todos!"</blockquote>
+        <a href="#" class="button" onclick="showSection('apresentacao')">Voltar à Apresentação</a>
+    </section>
+
+    <!-- Página de Teste do Produto -->
+    <section id="teste" class="section">
+        <h2>Experimente um dos nossos produtos!</h2>
+        <p>Clique no botão abaixo para iniciar o teste.</p>
+        <button onclick="alert('Teste iniciado! Aqui você poderá experimentar um recurso do nosso produto.')" class="button">Iniciar Teste</button>
+    </section>
+
 </div>
 
 <footer>
