@@ -1,133 +1,117 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitrine de Produtos Digitais</title>
+    <title>Loja de apps</title>
     <style>
-        /* Estilos básicos */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            background-color: #f9f9f9;
+            background: linear-gradient(135deg, #a8c0ff, #d9e4ff);
+            color: black;
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;
-        }
-        header {
-            background-color: #1a1a1a;
-            color: #fff;
-            padding: 40px 0;
-            width: 100%;
-        }
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        main {
-            width: 90%;
-            max-width: 800px;
-            margin: 20px auto;
-        }
-        .produtos {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
             justify-content: center;
-        }
-        .produto {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 250px;
-            transition: transform 0.3s;
-        }
-        .produto:hover {
-            transform: translateY(-5px);
-        }
-        .produto h2 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .produto p {
-            font-size: 1em;
-            margin-bottom: 15px;
-            color: #666;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            margin-top: 10px;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        footer {
-            width: 100%;
-            background-color: #1a1a1a;
-            color: #fff;
+            height: 100vh;
+            margin: 0;
             text-align: center;
-            padding: 10px 0;
-            margin-top: auto;
+            transition: background-color 0.5s ease;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2em;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 1px solid black;
+            background-size: cover;
+            background-position: center;
+            margin-top: 20px;
+        }
+
+        .logo.primary {
+            background-image: url('https://i.imgur.com/ruzO21g.png');
+        }
+
+        .logo.secondary {
+            background-image: url('https://i.imgur.com/yrw5fqe.png');
+        }
+
+        .download-btn {
+            margin-top: 10px;
+            padding: 15px 30px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            animation: pulsate 1.5s infinite;
+            text-decoration: none;
+        }
+
+        @keyframes pulsate {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        footer {
+            position: absolute;
+            bottom: -10px;
+            color: black;
+            font-size: 0.9em;
+        }
+
+        .download-name {
+            margin-top: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
         }
     </style>
+
+<!-- seo da pagina --> 
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Baixe os melhores aplicativos LUBU NET em APK. Experimente as versões 1 e 2 para uma internet mais rápida.">
+    <meta name="keywords" content="LUBU NET, APK, download, apps, internet ilimitada">
+    <meta name="author" content="@CARD_WOLF">
+
+    <meta property="og:title" content="Baixe LUBU NET - Internet Ilimitada">
+    <meta property="og:description" content="Experimente as versões 1 e 2 do LUBU NET para uma navegação eficiente.">
+    <meta property="og:image" content="https://i.imgur.com/ruzO21g.png">
+    <meta property="og:url" content="https://lubunet.github.io/site/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Baixe LUBU NET - Internet Ilimitda">
+    <meta name="twitter:description" content="Confira as versões 1 e 2 dos aplicativos LUBU NET para uma internet mais rápida.">
+    <meta name="twitter:image" content="https://i.imgur.com/ruzO21g.png">
+
+    <!-- icone da pagina -->
+    <link rel="icon" href="https://i.imgur.com/9LDqONx.png" type="image/png">
+
+
+    
 </head>
 <body>
-    <header>
-        <h1>Produtos Digitais Exclusivos</h1>
-        <p>Explore nossa coleção de produtos digitais de alta qualidade.</p>
-    </header>
+    <h1>Baixe Nossos Apps</h1>
+    
+    <div class="logo primary"></div>
+    <div class="download-name">LUBU NET</div>
+    <a href="https://raw.githubusercontent.com/lubunet/site/refs/heads/main/LUBUNET-dns1.apk" class="download-btn">DOWNLOAD</a>
 
-    <main>
-        <section class="produtos">
-            <div class="produto">
-                <h2>Produto 1</h2>
-                <p>Descrição breve do Produto 1.</p>
-                <button onclick="comprarProduto('Produto 1')">Compre Agora</button>
-                <button onclick="testeGratis('Produto 1')">Teste Grátis</button>
-            </div>
-            <div class="produto">
-                <h2>Produto 2</h2>
-                <p>Descrição breve do Produto 2.</p>
-                <button onclick="comprarProduto('Produto 2')">Compre Agora</button>
-                <button onclick="testeGratis('Produto 2')">Teste Grátis</button>
-            </div>
-            <div class="produto">
-                <h2>Produto 3</h2>
-                <p>Descrição breve do Produto 3.</p>
-                <button onclick="comprarProduto('Produto 3')">Compre Agora</button>
-                <button onclick="testeGratis('Produto 3')">Teste Grátis</button>
-            </div>
-        </section>
-    </main>
+    <div class="logo secondary"></div>
+    <div class="download-name">LUBU NET V2</div>
+    <a href="https://media.githubusercontent.com/media/lubunet/teste/refs/heads/main/LUBUNET-V2.apk?download=true" class="download-btn">DOWNLOAD</a>
 
-    <footer>
-        <p>&copy; 2024 Sua Empresa - Todos os direitos reservados.</p>
-    </footer>
-
-    <script>
-        function comprarProduto(produto) {
-            alert(`Você escolheu comprar: ${produto}. Redirecionando para a página de pagamento...`);
-            // Aqui você pode adicionar o redirecionamento para a página de pagamento, se necessário.
-        }
-
-        function testeGratis(produto) {
-            alert(`Iniciando teste grátis para: ${produto}. Aproveite a versão de avaliação!`);
-            // Aqui você pode adicionar lógica para iniciar o teste grátis, se necessário.
-        }
-    </script>
+    <footer>© @CARD_WOLF</footer>
 </body>
 </html>
